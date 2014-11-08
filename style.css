@@ -23,6 +23,10 @@ a, a:visited {
   text-shadow: 0 0 3px rgba(0, 0, 0, 0.9);
 }
 
+.crystal button:hover {
+  color: #fff;
+}
+
 .crystal button:focus {
   outline: none;
 }
@@ -83,46 +87,77 @@ a, a:visited {
   border-radius:50%;
   background-color: #000;
   z-index: 1;
+
   box-shadow:
     inset 0px 0px 100px rgba(255, 255, 255, 0.9),
     0px 5px 10px #000,
     inset 0px -15px 50px #000;
-}
 
-.crystal-border, .crystal-answer {
-  -webkit-transition: background-color 5s;
-  -moz-transition: background-color 5s;
+  transition: 5s;
+  -webkit-transition: 5s;
+  -moz-transition: 5s;
 }
 
 /* states */
 .yes .crystal-border {
+  animation: yes-colors 4s linear infinite reverse;
   -webkit-animation: yes-colors 4s linear infinite reverse;
   -moz-animation: yes-colors 4s linear infinite reverse;
 }
 
 .no .crystal-border {
+  animation: no-colors 4s linear infinite reverse;
   -webkit-animation: no-colors 4s linear infinite reverse;
   -moz-animation: no-colors 4s linear infinite reverse;
 }
 
 .maybe .crystal-border {
+  animation: maybe-colors 4s linear infinite reverse;
   -webkit-animation: maybe-colors 4s linear infinite reverse;
   -moz-animation: maybe-colors 4s linear infinite reverse;
 }
 
 .ask .crystal-border {
+  animation: ask-colors 4s linear infinite reverse;
   -webkit-animation: ask-colors 4s linear infinite reverse;
   -moz-animation: ask-colors 4s linear infinite reverse;
 }
 
 /* Animation */
-@-moz-keyframes colors{
-  0%,10%{background-color: red}
-  20%{background-color:yellow}
-  80%{backgorund-color:blue}
-  60%{background-color:purple}
+@keyframes ask-colors{
+  60%{background-color: gray}
 }
 
+@keyframes yes-colors{
+  60%{background-color:green}
+}
+
+@keyframes no-colors{
+  60%{background-color:red}
+}
+
+@keyframes maybe-colors{
+  50%{background-color:yellow}
+}
+
+/* mozila */
+@-moz-keyframes ask-colors{
+  60%{background-color: gray}
+}
+
+@-moz-keyframes yes-colors{
+  60%{background-color:green}
+}
+
+@-moz-keyframes no-colors{
+  60%{background-color:red}
+}
+
+@-moz-keyframes maybe-colors{
+  50%{background-color:yellow}
+}
+
+/* webkit */
 @-webkit-keyframes ask-colors{
   60%{background-color: gray}
 }
