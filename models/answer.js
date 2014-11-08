@@ -1,3 +1,5 @@
+var Random = require("random-js");
+
 var Answer = {
   list: [
     //Ask
@@ -50,4 +52,4 @@ var Answer = {
   }
 };
 
-if(typeof module !== "undefined") module.exports = Answer;
+module.exports = Answer;

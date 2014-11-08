@@ -1,3 +1,5 @@
+var React = require('react');
+
 var Crystal = React.createClass({
   getInitialState: function() {
     return this.props.model.create(0);
@@ -31,3 +33,5 @@ var Crystal = React.createClass({
     );
   }
 });
+
+module.exports = Crystal;
