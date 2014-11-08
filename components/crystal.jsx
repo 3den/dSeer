@@ -1,17 +1,32 @@
 var Crystal = React.createClass({
   getInitialState: function() {
-    return {answer: "?"};
+    return this.props.model.create(0);
   },
 
   onGaze: function() {
-    this.setState({answer: this.props.model.gaze()});
+    this.setState(this.props.model.create());
+  },
+
+  onReset: function() {
+    this.setState(this.props.model.create(0));
   },
 
   render: function() {
     return (
-      <div className="crystal">
-        <button className="crystal-answer" onClick={this.onGaze}>
-          {this.state.answer}</button>
+      <div className={"crystal " + this.state.type}>
+        <div className="crystal-border">
+          <button className="crystal-answer"
+            onClick={this.onGaze}>
+            {this.state.message}</button>
+        </div>
+        <div className="crystal-base"></div>
+        <button className="crystal-reset"
+          onClick={this.onReset}
+          dangerouslySetInnerHTML={{__html: '&olarr;'}} />
+        <p className="crystal-info">
+          &copy; dSeer by &nbsp;
+          <a target="_blank" href="https://github.com/3den">Marcelo Eden</a>
+        </p>
       </div>
     );
   }

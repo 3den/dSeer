@@ -1,5 +1,8 @@
 var Answer = {
   list: [
+    //Ask
+    "Ask a question... tap for the answer",
+
     // Yes
     "It is certain",
     "It is decidedly so",
@@ -27,12 +30,23 @@ var Answer = {
     "Very doubtful"
   ],
 
-  gaze: function() {
-    return this.list[this.random(this.list.length -1)];
+  create: function(index) {
+    var self = Object.create(this);
+    self.index = index !== undefined ? index : self.random(self.list.length - 1);
+    self.message = self.list[self.index];
+    self.type = self.getType();
+    return self;
+  },
+
+  getType: function () {
+    if (this.index === 0) return "ask"
+    if (this.index < 10) return "yes";
+    if (this.index < 15) return "maybe";
+    return "no";
   },
 
   random: function(max) {
-    return new Random(Random.engines.mt19937().autoSeed()).integer(0, max);
+    return new Random(Random.engines.mt19937().autoSeed()).die(max);
   }
 };
 
