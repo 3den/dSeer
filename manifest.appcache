@@ -1,0 +1,8 @@
+CACHE MANIFEST
+# v1 - 2014-11-08
+/index.html
+/bundle.min.js
+/style.css
+
+NETWORK:
+*
