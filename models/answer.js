@@ -40,8 +40,8 @@ var Answer = {
 
   getType: function () {
     if (this.index === 0) return "ask"
-    if (this.index < 10) return "yes";
-    if (this.index < 15) return "maybe";
+    if (this.index <= 10) return "yes";
+    if (this.index <= 15) return "maybe";
     return "no";
   },
 

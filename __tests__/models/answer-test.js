@@ -12,9 +12,9 @@ describe("Answer", function() {
   it("returns the correct type", function() {
     var i;
 
-    assertType(0, "ask");
-    for(i = 1; i < 10; i++) assertType(i, "yes");
-    for(i = 11; i < 15; i++) assertType(i, "maybe");
+    Answer.random(10)
+    for(i = 1; i < 11; i++) assertType(i, "yes");
+    for(i = 11; i < 16; i++) assertType(i, "maybe");
     for(i = 16; i < 20; i++) assertType(i, "no");
   });
 
