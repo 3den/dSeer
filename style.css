@@ -18,19 +18,6 @@ a, a:visited {
   z-index: 1;
 }
 
-.crystal-answer {
-  margin: 1px auto;
-  border-radius: 100%;
-  width: 300px;
-  height: 300px;
-  font-size: 2em;
-  padding: 1em;
-  font-weight: bold;
-  font-family: fantasy, sans-serif;
-  background: #222;
-  border: none;
-}
-
 .crystal button {
   color: rgba(255, 255, 255, 0.7);
   text-shadow: 0 0 3px rgba(0, 0, 0, 0.9);
@@ -71,8 +58,19 @@ a, a:visited {
   background-color: #222;
   z-index: 0;
   box-shadow: none;
-  -webkit-transition: box-shadow 1s, background-color 5s;
-  -moz-transition: box-shadow 1s, background-color 5s;
+}
+
+.crystal-answer {
+  margin: 1px auto;
+  border-radius: 100%;
+  width: 300px;
+  height: 300px;
+  font-size: 2em;
+  padding: 1em;
+  font-weight: bold;
+  border: none;
+  background: rgba(34, 34, 34, 0.5);
+  box-shadow: inset 0px 0px 100px rgba(0, 0, 0, 0.7);
 }
 
 .crystal-border {
@@ -84,55 +82,59 @@ a, a:visited {
   margin: 0 auto;
   border-radius:50%;
   background-color: #000;
-  box-shadow: none;
   z-index: 1;
-  -webkit-transition: box-shadow 1s, background-color 5s;
-  -moz-transition: box-shadow 1s, background-color 5s;
+  box-shadow:
+    inset 0px 0px 100px rgba(255, 255, 255, 0.9),
+    0px 5px 10px #000,
+    inset 0px -15px 50px #000;
 }
 
-.is-good .crystal-answer {
-  box-shadow: inset 0px 0px 100px white;
-  -webkit-animation: colors 4s linear infinite;
-  -moz-animation: colors 4s linear infinite;
-  background-color:red;
-  -webkit-transition: box-shadow 1s, background-color 5s;
-  -moz-transition: box-shadow 1s, background-color 5s;
+.crystal-border, .crystal-answer {
+  -webkit-transition: background-color 5s;
+  -moz-transition: background-color 5s;
 }
 
-.is-good .crystal-border {
-  -webkit-animation: colors 4s linear infinite reverse;
-  -moz-animation: colors 4s linear infinite reverse;
-  z-index: 1;
-  background-color: red;
-  box-shadow: inset 0px 0px 100px orange, 0px 5px 10px black, inset 0px -15px 50px black;
-  -webkit-transition: box-shadow 1s, background-color 5s;
-  -moz-transition: box-shadow 1s, background-color 5s;
+/* states */
+.yes .crystal-border {
+  -webkit-animation: yes-colors 4s linear infinite reverse;
+  -moz-animation: yes-colors 4s linear infinite reverse;
+}
+
+.no .crystal-border {
+  -webkit-animation: no-colors 4s linear infinite reverse;
+  -moz-animation: no-colors 4s linear infinite reverse;
+}
+
+.maybe .crystal-border {
+  -webkit-animation: maybe-colors 4s linear infinite reverse;
+  -moz-animation: maybe-colors 4s linear infinite reverse;
+}
+
+.ask .crystal-border {
+  -webkit-animation: ask-colors 4s linear infinite reverse;
+  -moz-animation: ask-colors 4s linear infinite reverse;
 }
 
 /* Animation */
-
-@-moz-keyframes glow{
-  0%,100%{box-shadow: none}
-  50%{box-shadow:0 0 50px red}
-}
-
-@-webkit-keyframes glow{
-  0%,100%{box-shadow: none}
-  50%{box-shadow:0 0 50px red}
-}
-
 @-moz-keyframes colors{
-  0%,100%{background-color: red}
+  0%,10%{background-color: red}
   20%{background-color:yellow}
-  40%{background-color:green}
+  80%{backgorund-color:blue}
   60%{background-color:purple}
-  80%{backgorund-color:yellow}
 }
 
-@-webkit-keyframes colors{
-  0%,100%{background-color: red}
-  20%{background-color:yellow}
-  40%{background-color:green}
-  60%{background-color:purple}
-  80%{backgorund-color:yellow}
+@-webkit-keyframes ask-colors{
+  60%{background-color: gray}
+}
+
+@-webkit-keyframes yes-colors{
+  60%{background-color:green}
+}
+
+@-webkit-keyframes no-colors{
+  60%{background-color:red}
+}
+
+@-webkit-keyframes maybe-colors{
+  50%{background-color:yellow}
 }
