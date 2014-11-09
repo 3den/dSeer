@@ -1,11 +1,15 @@
 CACHE MANIFEST
-# v3 - 2014-11-08
+# v4 - 2014-11-08
 /index.html
 /bundle.min.js
 /styles/layout.css
 /styles/crystal2.css
 /styles/crystal-animations.css
 /favicon.ico
+/images/icon2-60.png
+/images/icon2-76.png
+/images/icon2-120.png
+/images/icon2-152.png
 
 NETWORK:
 *
