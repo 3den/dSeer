@@ -2,19 +2,6 @@
   text-align: center;
 }
 
-.crystal button {
-  color: rgba(255, 255, 255, 0.8);
-  text-shadow: 0 0 5px rgba(255, 255, 255, 0.7);
-}
-
-.crystal button:hover {
-  color: #fff;
-}
-
-.crystal button:focus {
-  outline: none;
-}
-
 .crystal-info {
   z-index: 1;
   width: 100%;
@@ -46,10 +33,16 @@
   font-weight: bold;
   border: none;
   background: rgba(34, 34, 34, 0.5);
+  color: rgba(119, 119, 119, 0.9);
+  text-shadow: 0 0 3px rgba(255, 255, 255, 0.7);
   box-shadow:
     inset 0px 0px 100px rgba(255, 255, 255, 0.9),
-    0px 5px 10px #000,
+    0px 5px 10px rgba(0, 0, 0, 0.5),
     inset 0px -15px 50px #000;
+}
+
+.crystal-answer:hover {
+  color: rgba(221, 221, 221, 0.7);
 }
 
 .crystal-border {
