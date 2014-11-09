@@ -1,8 +1,10 @@
 CACHE MANIFEST
-# v1 - 2014-11-08
+# v2 - 2014-11-08
 /index.html
 /bundle.min.js
-/style.css
+/styles/layout.css
+/styles/crystal2.css
+/styles/crystal-animations.css
 
 NETWORK:
 *

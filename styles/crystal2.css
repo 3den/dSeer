@@ -1,0 +1,59 @@
+.crystal {
+  text-align: center;
+}
+
+.crystal button {
+  color: rgba(255, 255, 255, 0.8);
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
+}
+
+.crystal button:hover {
+  color: #fff;
+}
+
+.crystal button:focus {
+  outline: none;
+}
+
+.crystal-info {
+  z-index: 1;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  font-size: 0.7em;
+}
+
+.crystal-reset {
+  background: none;
+  border: none;
+  z-index: 1;
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 1.2em;
+}
+
+.crystal-answer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -150px 0 0 -150px;
+  width: 300px;
+  height: 300px;
+  font-size: 2em;
+  font-weight: bold;
+  border: none;
+  background: none;
+}
+
+.crystal-border {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  transition: 5s;
+  -webkit-transition: 5s;
+  -moz-transition: 5s;
+}

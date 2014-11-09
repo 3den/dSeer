@@ -1,0 +1,74 @@
+.yes .crystal-border {
+  animation: yes-colors 4s linear infinite reverse;
+  -webkit-animation: yes-colors 4s linear infinite reverse;
+  -moz-animation: yes-colors 4s linear infinite reverse;
+}
+
+.no .crystal-border {
+  animation: no-colors 4s linear infinite reverse;
+  -webkit-animation: no-colors 4s linear infinite reverse;
+  -moz-animation: no-colors 4s linear infinite reverse;
+}
+
+.maybe .crystal-border {
+  animation: maybe-colors 4s linear infinite reverse;
+  -webkit-animation: maybe-colors 4s linear infinite reverse;
+  -moz-animation: maybe-colors 4s linear infinite reverse;
+}
+
+.ask .crystal-border {
+  animation: ask-colors 4s linear infinite reverse;
+  -webkit-animation: ask-colors 4s linear infinite reverse;
+  -moz-animation: ask-colors 4s linear infinite reverse;
+}
+
+/* Animation */
+@keyframes ask-colors{
+  60%{background-color: gray}
+}
+
+@keyframes yes-colors{
+  60%{background-color:green}
+}
+
+@keyframes no-colors{
+  60%{background-color:red}
+}
+
+@keyframes maybe-colors{
+  50%{background-color:orange}
+}
+
+/* mozila */
+@-moz-keyframes ask-colors{
+  60%{background-color: gray}
+}
+
+@-moz-keyframes yes-colors{
+  60%{background-color:green}
+}
+
+@-moz-keyframes no-colors{
+  60%{background-color:red}
+}
+
+@-moz-keyframes maybe-colors{
+  50%{background-color:orange}
+}
+
+/* webkit */
+@-webkit-keyframes ask-colors{
+  60%{background-color: gray}
+}
+
+@-webkit-keyframes yes-colors{
+  60%{background-color:green}
+}
+
+@-webkit-keyframes no-colors{
+  60%{background-color:red}
+}
+
+@-webkit-keyframes maybe-colors{
+  50%{background-color:orange}
+}
