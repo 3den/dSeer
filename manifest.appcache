@@ -1,5 +1,6 @@
 CACHE MANIFEST
-# v4 - 2014-11-08
+# v6 - 2014-11-16
+/
 /index.html
 /bundle.min.js
 /styles/layout.css
@@ -10,6 +11,3 @@ CACHE MANIFEST
 /images/icon2-76.png
 /images/icon2-120.png
 /images/icon2-152.png
-
-NETWORK:
-*

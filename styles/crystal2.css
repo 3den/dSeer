@@ -5,7 +5,7 @@
 .crystal-info {
   z-index: 1;
   width: 100%;
-  position: absolute;
+  position: fixed;
   bottom: 0;
   font-size: 0.7em;
 }
@@ -14,14 +14,14 @@
   background: none;
   border: none;
   z-index: 1;
-  position: absolute;
+  position: fixed;
   left: 0;
   top: 0;
-  font-size: 1.2em;
+  font-size: 1.5em;
 }
 
 .crystal-answer {
-  position: absolute;
+  position: fixed;
   top: 50%;
   left: 50%;
   margin: -150px 0 0 -150px;
@@ -32,7 +32,7 @@
   font-size: 2em;
   font-weight: bold;
   border: none;
-  background: rgba(34, 34, 34, 0.5);
+  background: rgba(255, 255, 255, 0.5);
   color: rgba(119, 119, 119, 0.9);
   text-shadow: 0 0 3px rgba(255, 255, 255, 0.7);
   box-shadow:
@@ -42,11 +42,11 @@
 }
 
 .crystal-answer:hover {
-  color: rgba(221, 221, 221, 0.7);
+  color: #FFF;
 }
 
 .crystal-border {
-  position: absolute;
+  position: fixed;
   top: 0;
   bottom: 0;
   left: 0;
