@@ -4,14 +4,17 @@
   "description": "",
   "main": "index.html",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "bundle": "browserify -t reactify app.js -o bundle.js",
+    "uglify": "uglifyjs bundle.js -o bundle.min.js"
   },
   "author": "Marcelo Eden",
   "license": "ISC",
   "devDependencies": {
     "browserify": "^6.2.0",
     "jest-cli": "^0.1.18",
-    "reactify": "^0.15.2"
+    "reactify": "^0.15.2",
+    "uglify-js": "^2.4.16"
   },
   "dependencies": {
     "react": "^0.12.0",

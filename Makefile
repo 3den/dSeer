@@ -1,3 +1,4 @@
 init:
-	browserify -t reactify app.js -o bundle.js
-	uglifyjs bundle.js -o bundle.min.js
+	npm run test
+	npm run bundle
+	npm run uglify

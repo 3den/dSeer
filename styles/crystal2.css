@@ -15,8 +15,9 @@
   border: none;
   z-index: 1;
   position: fixed;
-  left: 0;
-  top: 0;
+  left: 50%;
+  top: 50%;
+  margin: -150px 0 0 110px;
   font-size: 1.5em;
 }
 
